@@ -1,6 +1,10 @@
 [build]
   command = "npm run build"
   publish = ".next"
+  environment = { NODE_VERSION = "18" } # Specify Node.js version (18 or 20 recommended for Next.js 15)
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs" # Required for Next.js on Netlify
 
 [functions]
   directory = ".netlify/functions"
